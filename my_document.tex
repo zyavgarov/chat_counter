@@ -1,0 +1,66 @@
+
+\documentclass[10pt]{article}
+
+\usepackage{fontspec}        % Font management
+\setmainfont{CMU Serif}      % Main font
+%\sloppy
+
+%\usepackage[utf8]{inputenc}
+%\usepackage[english]{babel}
+
+%\usepackage[margin=1in]{geometry} 
+\usepackage{graphicx}
+\title{Chat statistics}
+\usepackage{float}
+
+\begin{document}
+
+    \maketitle
+    This document contains some statistics on chat between R Z and Mikhail Tal.
+    The chat was held from 2018-02-24 to 2024-10-03.
+    Filtered data contains 36867 messages.
+    
+    The first graph shows relative number of messages sent by each chat participant.
+    \begin{figure}[H]
+        \includegraphics[width=1.1\textwidth]{pie_chart.png}
+    \end{figure}
+    
+    Here is another graph. It shows number of messages sent by each chat participant per month.
+    \begin{figure}[H]
+        \includegraphics[width=1.1\textwidth]{chat_per_month.png}
+    \end{figure}
+    
+    \newpage
+    The graph below shows percentages of messages sent by each chat participant per month.
+    \begin{figure}[H]
+        \includegraphics[width=1.1\textwidth]{percentages_by_month.png}
+    \end{figure}
+    
+    Another statistics about participants is an average number of words per message.
+    Here are the results: 
+    \begin{itemize}
+        \item R Z: 6.89
+        \item Mikhail Tal: 6.84
+    \end{itemize}
+    
+    If one participant helps another with something, in most cases it implies gratitude. 
+    So it's interesting to see how often that happens.
+    We use the following keywords to define gratitude:
+    "thank", "thx", "спс", "спасиб".
+    If any of that found in a message we assume that the message is an expression of gratitude.
+    \begin{figure}[H]
+        \includegraphics[width=1.1\textwidth]{gratitudes.png}
+    \end{figure}
+    
+    \newpage
+    The graph below shows number of conversations per month.
+    We define sequence of messages a conversation if the following conditions are met:
+    \begin {itemize}
+        \item Contains more than 3 messages
+        \item The distance between two messages is less than 20 minutes
+    \end {itemize}
+    \begin{figure}[H]
+        \includegraphics[width=1.1\textwidth]{conversations_per_month.png}
+    \end{figure}
+      
+\end{document}
